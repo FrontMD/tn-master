@@ -222,6 +222,61 @@ html:has(.sealant-master) {
   letter-spacing: -0.02em;
   margin-bottom: auto;
 }
+.sealant-master .tnm-text {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+}
+.sealant-master .tnm-text p,
+.sealant-master .tnm-text ul,
+.sealant-master .tnm-text li {
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+.sealant-master .tnm-text * {
+  margin: 0;
+  padding: 0;
+}
+.sealant-master .tnm-text > * {
+  margin-top: 0.625em;
+}
+.sealant-master .tnm-text > *:first-child {
+  margin-top: 0;
+}
+.sealant-master .tnm-text li {
+  position: relative;
+  padding-left: 1em;
+}
+.sealant-master .tnm-text li:before {
+  content: "";
+  position: absolute;
+  left: 0em;
+  top: 0.625em;
+  width: 0.375em;
+  height: 0.375em;
+  background-color: #272E31;
+  border-radius: 100%;
+}
+.sealant-master .tnm-text li + li {
+  margin-top: 10px;
+}
+.sealant-master .tnm-purpose {
+  position: relative;
+  padding-left: 22px;
+}
+.sealant-master .tnm-purpose__desc {
+  margin-top: 16px;
+}
+.sealant-master .tnm-purpose__icon {
+  position: absolute;
+  left: 0;
+  top: 4.5px;
+}
+.sealant-master .tnm-purpose__icon svg {
+  width: 12px;
+  height: 20px;
+}
 .sealant-master .tnm-menu {
   display: flex;
   align-items: stretch;
@@ -419,6 +474,148 @@ html:has(.sealant-master) {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 67px 39px;
   margin-top: 75px;
+}
+.sealant-master .tnm-modal.hystmodal:before {
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+  backdrop-filter: blur(16px);
+}
+.sealant-master .hystmodal__window {
+  margin: auto;
+  width: 1440px;
+  padding: 0 58px;
+  background-color: transparent;
+}
+.sealant-master .tnm-modal__content {
+  position: relative;
+  max-height: calc(100vh - 50px);
+  background-color: #fff;
+  display: flex;
+  align-items: stretch;
+}
+.sealant-master .tnm-modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #272E31;
+  cursor: pointer;
+  transition: color 0.3s linear;
+}
+.sealant-master .tnm-modal__close:hover {
+  color: #000;
+}
+.sealant-master .tnm-advantages {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 32px;
+  margin-top: 29px;
+}
+.sealant-master .tnm-advantages__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.sealant-master .tnm-advantages__text {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.sealant-master .prod-modal {
+  width: 100%;
+  padding: 40px 80px 40px 40px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3), 0px 4px 8px 3px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  overflow-y: auto;
+  display: flex;
+  gap: 40px;
+}
+.sealant-master .prod-modal__left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  flex: 0 0 309px;
+}
+.sealant-master .prod-modal__img {
+  width: 182px;
+  margin-left: 12.6%;
+  margin-bottom: 5px;
+}
+.sealant-master .prod-modal__img img {
+  width: 100%;
+}
+.sealant-master .prod-modal__volume {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 120%;
+  text-align: center;
+}
+.sealant-master .prod-modal__btn {
+  width: 100%;
+}
+.sealant-master .prod-modal__colors {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  width: 100%;
+}
+.sealant-master .prod-modal__color {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  flex: 0 1 50%;
+  padding: 8px 12px;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 100%;
+  border: 1px solid #272E31;
+}
+.sealant-master .prod-modal__color--white {
+  background-color: #fff;
+  border-color: #fff;
+  color: #1B4052;
+}
+.sealant-master .prod-modal__right {
+  flex: 1 1 auto;
+  max-width: calc(100% - 309px - 40px);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 32px;
+}
+.sealant-master .prod-modal__title {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+.sealant-master .prod-modal__subtitle {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+.sealant-master .prod-modal--blue {
+  background-color: rgba(99, 179, 229, 0.4);
+}
+.sealant-master .prod-modal--brown {
+  background-color: rgba(171, 134, 68, 0.4);
+}
+.sealant-master .prod-modal--purple {
+  background-color: rgba(175, 127, 173, 0.4);
+}
+.sealant-master .prod-modal--green {
+  background-color: rgba(125, 175, 108, 0.4);
+}
+.sealant-master .prod-modal--grey {
+  background-color: rgba(143, 147, 145, 0.4);
+}
+.sealant-master .prod-modal--black {
+  background-color: rgba(35, 35, 35, 0.4);
 }
 .sealant-master .video-block {
   margin-left: calc((1440px - 100%) / -2);
