@@ -3,6 +3,46 @@ $(document).ready(function(){
 	var clobj = "click";
 	if(iOS != null) clobj = "touchstart";
 
+	/* burger menu */
+	const burgerOpen = document.querySelector("[data-js=burgerOpen]")
+	const burgerMenu = document.querySelector("[data-js=burgerMenu]")
+	const burgerOverlay = document.querySelector("[data-name=burgerOverlay]")
+
+	if(burgerOpen && burgerMenu) {
+		const burgerCloses = document.querySelectorAll("[data-js=burgerClose]")
+
+		burgerOpen.addEventListener('click', () => {
+			burgerMenu.classList.add('active')
+			if(burgerOverlay) {
+				burgerOverlay.classList.add('active')
+			}
+			lockBody()
+		})
+
+		burgerCloses.forEach(burgerClose => {
+			burgerClose.addEventListener('click', () => {
+				burgerMenu.classList.remove('active')
+				if(burgerOverlay) {
+					burgerOverlay.classList.remove('active')
+				}
+			})
+			unlockBody()
+		})
+	}
+
+	/* Anhors */
+	
+	$("body").on(clobj, '[href*="#"]', function(e){
+		var fixed_offset = 50;
+		$('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 100);
+		burgerMenu.classList.remove('active')
+		if(burgerOverlay) {
+			burgerOverlay.classList.remove('active')
+		}
+		e.preventDefault();
+		unlockBody();
+	});
+
 	/* Accordions */
 	const accordions = document.querySelectorAll(".accordion");
 	const openAccordion = (accordion) => {

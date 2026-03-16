@@ -27,7 +27,29 @@
 								<a href="javascript:void(0);" class="tnm-header__logo">
 									<img src="./img/logo.png" alt="">
 								</a>
-								<nav class="tnm-header__menu">
+								<button class="burger-open" data-js="burgerOpen">
+									<svg width="29" height="23" viewBox="0 0 29 23" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<rect x="29" y="0.214844" width="3" height="29"
+											transform="rotate(90 29 0.214844)" fill="currentColor" />
+										<rect x="29" y="8.69922" width="3" height="29" transform="rotate(90 29 8.69922)"
+											fill="currentColor" />
+										<rect x="29" y="17.1855" width="3" height="29" transform="rotate(90 29 17.1855)"
+											fill="currentColor" />
+									</svg>
+								</button>
+								<div class="burger-overlay" data-js="burgerClose" data-name="burgerOverlay"></div>
+								<nav class="tnm-header__menu" data-js="burgerMenu">
+									<button class="burger-close" data-js="burgerClose">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<rect x="20.5059" width="4" height="29" transform="rotate(45 20.5059 0)"
+												fill="currentColor" />
+											<rect width="4" height="29"
+												transform="matrix(-0.707107 0.707107 0.707107 0.707107 2.82812 0)"
+												fill="currentColor" />
+										</svg>
+									</button>
 									<ul class="tnm-menu">
 										<li class="tnm-menu__item"><a href="#comparison">Было/Стало</a></li>
 										<li class="tnm-menu__item"><a href="#catalog">Герметики</a></li>
@@ -694,106 +716,112 @@
 									</svg>
 								</div>
 								<div class="prod-modal prod-modal--blue">
-									<div class="prod-modal__left">
-										<div class="prod-modal__img">
-											<img src="./img/prod_modal_1.png" alt="">
-										</div>
-										<div class="prod-modal__volume">Объем: 280 мл</div>
-										<div class="prod-modal__colors">
-											<div class="prod-modal__color prod-modal__color--white">Белый</div>
-											<div class="prod-modal__color">Бесцветный</div>
-										</div>
-										<a href="javascript:void(0);" class="tnm-btn prod-modal__btn">Купить в
-											интернет-магазине</a>
-									</div>
-									<div class="prod-modal__right">
-										<div class="prod-modal__header">
-											<div class="prod-modal__title">Универсальный силикон</div>
-											<div class="prod-modal__subtitle">для многофункционального использования
+									<div class="prod-modal__inner">
+										<div class="prod-modal__left">
+											<div class="prod-modal__img">
+												<img src="./img/prod_modal_1.png" alt="">
 											</div>
+											<div class="prod-modal__volume">Объем: 280 мл</div>
+											<div class="prod-modal__colors">
+												<div class="prod-modal__color prod-modal__color--white">Белый</div>
+												<div class="prod-modal__color">Бесцветный</div>
+											</div>
+											<a href="javascript:void(0);" class="tnm-btn prod-modal__btn">Купить в
+												интернет-магазине</a>
 										</div>
-										<div class="prod-modal__desc tnm-text">Герметик объединяет все ключевые
-											преимущества ассортимента линейки герметиков: сертифицирован на устойчивость
-											к грибкам, сохраняет первоначальный цвет под воздействием внешних факторов и
-											подходит для применения в любых условиях, что делает его 100% универсальным
-										</div>
+										<div class="prod-modal__right">
+											<div class="prod-modal__header">
+												<div class="prod-modal__title">Универсальный силикон</div>
+												<div class="prod-modal__subtitle">для многофункционального использования
+												</div>
+											</div>
+											<div class="prod-modal__desc tnm-text">Герметик объединяет все ключевые
+												преимущества ассортимента линейки герметиков: сертифицирован на
+												устойчивость
+												к грибкам, сохраняет первоначальный цвет под воздействием внешних
+												факторов и
+												подходит для применения в любых условиях, что делает его 100%
+												универсальным
+											</div>
 
-										<div class="tnm-purpose">
+											<div class="tnm-purpose">
 
-											<div class="tnm-purpose__icon">
-												<svg width="12" height="20" viewBox="0 0 12 20" fill="none"
-													xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M7.64886 10L0.503817 3.00448C0.167939 2.67564 0 2.2571 0 1.74888C0 1.24066 0.167939 0.822123 0.503817 0.493274C0.839695 0.164425 1.26718 0 1.78626 0C2.30534 0 2.73282 0.164425 3.0687 0.493274L11.4962 8.74439C11.6794 8.92377 11.8092 9.11809 11.8855 9.32735C11.9618 9.53662 12 9.76084 12 10C12 10.2392 11.9618 10.4634 11.8855 10.6726C11.8092 10.8819 11.6794 11.0762 11.4962 11.2556L3.0687 19.5067C2.73282 19.8356 2.30534 20 1.78626 20C1.26718 20 0.839695 19.8356 0.503817 19.5067C0.167939 19.1779 0 18.7593 0 18.2511C0 17.7429 0.167939 17.3244 0.503817 16.9955L7.64886 10Z"
-														fill="#E30613" />
-												</svg>
+												<div class="tnm-purpose__icon">
+													<svg width="12" height="20" viewBox="0 0 12 20" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M7.64886 10L0.503817 3.00448C0.167939 2.67564 0 2.2571 0 1.74888C0 1.24066 0.167939 0.822123 0.503817 0.493274C0.839695 0.164425 1.26718 0 1.78626 0C2.30534 0 2.73282 0.164425 3.0687 0.493274L11.4962 8.74439C11.6794 8.92377 11.8092 9.11809 11.8855 9.32735C11.9618 9.53662 12 9.76084 12 10C12 10.2392 11.9618 10.4634 11.8855 10.6726C11.8092 10.8819 11.6794 11.0762 11.4962 11.2556L3.0687 19.5067C2.73282 19.8356 2.30534 20 1.78626 20C1.26718 20 0.839695 19.8356 0.503817 19.5067C0.167939 19.1779 0 18.7593 0 18.2511C0 17.7429 0.167939 17.3244 0.503817 16.9955L7.64886 10Z"
+															fill="#E30613" />
+													</svg>
+												</div>
+												<div class="tnm-purpose__title">Для работ с большинством поверхностей
+												</div>
+												<div class="tnm-purpose__desc tnm-text">
+													<ul>
+														<li>Пластик, стекло, эмалированные поверхности, лакированная
+															древесина, керамика, коррозионно-стойкие металлы</li>
+													</ul>
+												</div>
 											</div>
-											<div class="tnm-purpose__title">Для работ с большинством поверхностей</div>
-											<div class="tnm-purpose__desc tnm-text">
-												<ul>
-													<li>Пластик, стекло, эмалированные поверхности, лакированная
-														древесина, керамика, коррозионно-стойкие металлы</li>
-												</ul>
-											</div>
-										</div>
 
-										<div class="tnm-purpose">
-											<div class="tnm-purpose__icon">
-												<svg width="12" height="20" viewBox="0 0 12 20" fill="none"
-													xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M7.64886 10L0.503817 3.00448C0.167939 2.67564 0 2.2571 0 1.74888C0 1.24066 0.167939 0.822123 0.503817 0.493274C0.839695 0.164425 1.26718 0 1.78626 0C2.30534 0 2.73282 0.164425 3.0687 0.493274L11.4962 8.74439C11.6794 8.92377 11.8092 9.11809 11.8855 9.32735C11.9618 9.53662 12 9.76084 12 10C12 10.2392 11.9618 10.4634 11.8855 10.6726C11.8092 10.8819 11.6794 11.0762 11.4962 11.2556L3.0687 19.5067C2.73282 19.8356 2.30534 20 1.78626 20C1.26718 20 0.839695 19.8356 0.503817 19.5067C0.167939 19.1779 0 18.7593 0 18.2511C0 17.7429 0.167939 17.3244 0.503817 16.9955L7.64886 10Z"
-														fill="#E30613" />
-												</svg>
-											</div>
-											<div class="tnm-purpose__title">Для герметизации</div>
-											<div class="tnm-purpose__desc tnm-text">
-												<ul>
-													<li>Строительных швов на поверхностях из керамики/кирпича</li>
-													<li>Оконных блоков, подоконников и плинтусов</li>
-													<li>Пластиковых вентиляционных труб</li>
-													<li>Швов в светопрозрачных конструкциях</li>
-												</ul>
-											</div>
-										</div>
-										<div class="tnm-advantages">
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_1.svg" alt="">
+											<div class="tnm-purpose">
+												<div class="tnm-purpose__icon">
+													<svg width="12" height="20" viewBox="0 0 12 20" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M7.64886 10L0.503817 3.00448C0.167939 2.67564 0 2.2571 0 1.74888C0 1.24066 0.167939 0.822123 0.503817 0.493274C0.839695 0.164425 1.26718 0 1.78626 0C2.30534 0 2.73282 0.164425 3.0687 0.493274L11.4962 8.74439C11.6794 8.92377 11.8092 9.11809 11.8855 9.32735C11.9618 9.53662 12 9.76084 12 10C12 10.2392 11.9618 10.4634 11.8855 10.6726C11.8092 10.8819 11.6794 11.0762 11.4962 11.2556L3.0687 19.5067C2.73282 19.8356 2.30534 20 1.78626 20C1.26718 20 0.839695 19.8356 0.503817 19.5067C0.167939 19.1779 0 18.7593 0 18.2511C0 17.7429 0.167939 17.3244 0.503817 16.9955L7.64886 10Z"
+															fill="#E30613" />
+													</svg>
 												</div>
-												<div class="tnm-advantages__text">Простота применения</div>
-											</div>
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_2.svg" alt="">
-												</div>
-												<div class="tnm-advantages__text">Устойчив к&nbsp;влаге</div>
-											</div>
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_3.svg" alt="">
-												</div>
-												<div class="tnm-advantages__text">Термостойкий</div>
-											</div>
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_4.svg" alt="">
-												</div>
-												<div class="tnm-advantages__text">Отличная адгезия</div>
-											</div>
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_5.svg" alt="">
-												</div>
-												<div class="tnm-advantages__text">Стойкий к&nbsp;воздействию
-													ультрафиолета
+												<div class="tnm-purpose__title">Для герметизации</div>
+												<div class="tnm-purpose__desc tnm-text">
+													<ul>
+														<li>Строительных швов на поверхностях из керамики/кирпича</li>
+														<li>Оконных блоков, подоконников и плинтусов</li>
+														<li>Пластиковых вентиляционных труб</li>
+														<li>Швов в светопрозрачных конструкциях</li>
+													</ul>
 												</div>
 											</div>
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_6.svg" alt="">
+											<div class="tnm-advantages">
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_1.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Простота применения</div>
 												</div>
-												<div class="tnm-advantages__text">Универсальный</div>
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_2.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Устойчив к&nbsp;влаге</div>
+												</div>
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_3.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Термостойкий</div>
+												</div>
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_4.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Отличная адгезия</div>
+												</div>
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_5.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Стойкий к&nbsp;воздействию
+														ультрафиолета
+													</div>
+												</div>
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_6.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Универсальный</div>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -815,106 +843,112 @@
 									</svg>
 								</div>
 								<div class="prod-modal prod-modal--brown">
-									<div class="prod-modal__left">
-										<div class="prod-modal__img">
-											<img src="./img/prod_modal_2.png" alt="">
-										</div>
-										<div class="prod-modal__volume">Объем: 280 мл</div>
-										<div class="prod-modal__colors">
-											<div class="prod-modal__color prod-modal__color--white">Белый</div>
-											<div class="prod-modal__color">Бесцветный</div>
-										</div>
-										<a href="javascript:void(0);" class="tnm-btn prod-modal__btn">Купить в
-											интернет-магазине</a>
-									</div>
-									<div class="prod-modal__right">
-										<div class="prod-modal__header">
-											<div class="prod-modal__title">Универсальный силикон</div>
-											<div class="prod-modal__subtitle">для многофункционального использования
+									<div class="prod-modal__inner">
+										<div class="prod-modal__left">
+											<div class="prod-modal__img">
+												<img src="./img/prod_modal_2.png" alt="">
 											</div>
+											<div class="prod-modal__volume">Объем: 280 мл</div>
+											<div class="prod-modal__colors">
+												<div class="prod-modal__color prod-modal__color--white">Белый</div>
+												<div class="prod-modal__color">Бесцветный</div>
+											</div>
+											<a href="javascript:void(0);" class="tnm-btn prod-modal__btn">Купить в
+												интернет-магазине</a>
 										</div>
-										<div class="prod-modal__desc tnm-text">Герметик объединяет все ключевые
-											преимущества ассортимента линейки герметиков: сертифицирован на устойчивость
-											к грибкам, сохраняет первоначальный цвет под воздействием внешних факторов и
-											подходит для применения в любых условиях, что делает его 100% универсальным
-										</div>
+										<div class="prod-modal__right">
+											<div class="prod-modal__header">
+												<div class="prod-modal__title">Универсальный силикон</div>
+												<div class="prod-modal__subtitle">для многофункционального использования
+												</div>
+											</div>
+											<div class="prod-modal__desc tnm-text">Герметик объединяет все ключевые
+												преимущества ассортимента линейки герметиков: сертифицирован на
+												устойчивость
+												к грибкам, сохраняет первоначальный цвет под воздействием внешних
+												факторов и
+												подходит для применения в любых условиях, что делает его 100%
+												универсальным
+											</div>
 
-										<div class="tnm-purpose">
+											<div class="tnm-purpose">
 
-											<div class="tnm-purpose__icon">
-												<svg width="12" height="20" viewBox="0 0 12 20" fill="none"
-													xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M7.64886 10L0.503817 3.00448C0.167939 2.67564 0 2.2571 0 1.74888C0 1.24066 0.167939 0.822123 0.503817 0.493274C0.839695 0.164425 1.26718 0 1.78626 0C2.30534 0 2.73282 0.164425 3.0687 0.493274L11.4962 8.74439C11.6794 8.92377 11.8092 9.11809 11.8855 9.32735C11.9618 9.53662 12 9.76084 12 10C12 10.2392 11.9618 10.4634 11.8855 10.6726C11.8092 10.8819 11.6794 11.0762 11.4962 11.2556L3.0687 19.5067C2.73282 19.8356 2.30534 20 1.78626 20C1.26718 20 0.839695 19.8356 0.503817 19.5067C0.167939 19.1779 0 18.7593 0 18.2511C0 17.7429 0.167939 17.3244 0.503817 16.9955L7.64886 10Z"
-														fill="#E30613" />
-												</svg>
+												<div class="tnm-purpose__icon">
+													<svg width="12" height="20" viewBox="0 0 12 20" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M7.64886 10L0.503817 3.00448C0.167939 2.67564 0 2.2571 0 1.74888C0 1.24066 0.167939 0.822123 0.503817 0.493274C0.839695 0.164425 1.26718 0 1.78626 0C2.30534 0 2.73282 0.164425 3.0687 0.493274L11.4962 8.74439C11.6794 8.92377 11.8092 9.11809 11.8855 9.32735C11.9618 9.53662 12 9.76084 12 10C12 10.2392 11.9618 10.4634 11.8855 10.6726C11.8092 10.8819 11.6794 11.0762 11.4962 11.2556L3.0687 19.5067C2.73282 19.8356 2.30534 20 1.78626 20C1.26718 20 0.839695 19.8356 0.503817 19.5067C0.167939 19.1779 0 18.7593 0 18.2511C0 17.7429 0.167939 17.3244 0.503817 16.9955L7.64886 10Z"
+															fill="#E30613" />
+													</svg>
+												</div>
+												<div class="tnm-purpose__title">Для работ с большинством поверхностей
+												</div>
+												<div class="tnm-purpose__desc tnm-text">
+													<ul>
+														<li>Пластик, стекло, эмалированные поверхности, лакированная
+															древесина, керамика, коррозионно-стойкие металлы</li>
+													</ul>
+												</div>
 											</div>
-											<div class="tnm-purpose__title">Для работ с большинством поверхностей</div>
-											<div class="tnm-purpose__desc tnm-text">
-												<ul>
-													<li>Пластик, стекло, эмалированные поверхности, лакированная
-														древесина, керамика, коррозионно-стойкие металлы</li>
-												</ul>
-											</div>
-										</div>
 
-										<div class="tnm-purpose">
-											<div class="tnm-purpose__icon">
-												<svg width="12" height="20" viewBox="0 0 12 20" fill="none"
-													xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M7.64886 10L0.503817 3.00448C0.167939 2.67564 0 2.2571 0 1.74888C0 1.24066 0.167939 0.822123 0.503817 0.493274C0.839695 0.164425 1.26718 0 1.78626 0C2.30534 0 2.73282 0.164425 3.0687 0.493274L11.4962 8.74439C11.6794 8.92377 11.8092 9.11809 11.8855 9.32735C11.9618 9.53662 12 9.76084 12 10C12 10.2392 11.9618 10.4634 11.8855 10.6726C11.8092 10.8819 11.6794 11.0762 11.4962 11.2556L3.0687 19.5067C2.73282 19.8356 2.30534 20 1.78626 20C1.26718 20 0.839695 19.8356 0.503817 19.5067C0.167939 19.1779 0 18.7593 0 18.2511C0 17.7429 0.167939 17.3244 0.503817 16.9955L7.64886 10Z"
-														fill="#E30613" />
-												</svg>
-											</div>
-											<div class="tnm-purpose__title">Для герметизации</div>
-											<div class="tnm-purpose__desc tnm-text">
-												<ul>
-													<li>Строительных швов на поверхностях из керамики/кирпича</li>
-													<li>Оконных блоков, подоконников и плинтусов</li>
-													<li>Пластиковых вентиляционных труб</li>
-													<li>Швов в светопрозрачных конструкциях</li>
-												</ul>
-											</div>
-										</div>
-										<div class="tnm-advantages">
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_1.svg" alt="">
+											<div class="tnm-purpose">
+												<div class="tnm-purpose__icon">
+													<svg width="12" height="20" viewBox="0 0 12 20" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M7.64886 10L0.503817 3.00448C0.167939 2.67564 0 2.2571 0 1.74888C0 1.24066 0.167939 0.822123 0.503817 0.493274C0.839695 0.164425 1.26718 0 1.78626 0C2.30534 0 2.73282 0.164425 3.0687 0.493274L11.4962 8.74439C11.6794 8.92377 11.8092 9.11809 11.8855 9.32735C11.9618 9.53662 12 9.76084 12 10C12 10.2392 11.9618 10.4634 11.8855 10.6726C11.8092 10.8819 11.6794 11.0762 11.4962 11.2556L3.0687 19.5067C2.73282 19.8356 2.30534 20 1.78626 20C1.26718 20 0.839695 19.8356 0.503817 19.5067C0.167939 19.1779 0 18.7593 0 18.2511C0 17.7429 0.167939 17.3244 0.503817 16.9955L7.64886 10Z"
+															fill="#E30613" />
+													</svg>
 												</div>
-												<div class="tnm-advantages__text">Простота применения</div>
-											</div>
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_2.svg" alt="">
-												</div>
-												<div class="tnm-advantages__text">Устойчив к&nbsp;влаге</div>
-											</div>
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_3.svg" alt="">
-												</div>
-												<div class="tnm-advantages__text">Термостойкий</div>
-											</div>
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_4.svg" alt="">
-												</div>
-												<div class="tnm-advantages__text">Отличная адгезия</div>
-											</div>
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_5.svg" alt="">
-												</div>
-												<div class="tnm-advantages__text">Стойкий к&nbsp;воздействию
-													ультрафиолета
+												<div class="tnm-purpose__title">Для герметизации</div>
+												<div class="tnm-purpose__desc tnm-text">
+													<ul>
+														<li>Строительных швов на поверхностях из керамики/кирпича</li>
+														<li>Оконных блоков, подоконников и плинтусов</li>
+														<li>Пластиковых вентиляционных труб</li>
+														<li>Швов в светопрозрачных конструкциях</li>
+													</ul>
 												</div>
 											</div>
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_6.svg" alt="">
+											<div class="tnm-advantages">
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_1.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Простота применения</div>
 												</div>
-												<div class="tnm-advantages__text">Универсальный</div>
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_2.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Устойчив к&nbsp;влаге</div>
+												</div>
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_3.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Термостойкий</div>
+												</div>
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_4.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Отличная адгезия</div>
+												</div>
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_5.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Стойкий к&nbsp;воздействию
+														ультрафиолета
+													</div>
+												</div>
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_6.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Универсальный</div>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -936,106 +970,112 @@
 									</svg>
 								</div>
 								<div class="prod-modal prod-modal--purple">
-									<div class="prod-modal__left">
-										<div class="prod-modal__img">
-											<img src="./img/prod_modal_3.png" alt="">
-										</div>
-										<div class="prod-modal__volume">Объем: 280 мл</div>
-										<div class="prod-modal__colors">
-											<div class="prod-modal__color prod-modal__color--white">Белый</div>
-											<div class="prod-modal__color">Бесцветный</div>
-										</div>
-										<a href="javascript:void(0);" class="tnm-btn prod-modal__btn">Купить в
-											интернет-магазине</a>
-									</div>
-									<div class="prod-modal__right">
-										<div class="prod-modal__header">
-											<div class="prod-modal__title">Универсальный силикон</div>
-											<div class="prod-modal__subtitle">для многофункционального использования
+									<div class="prod-modal__inner">
+										<div class="prod-modal__left">
+											<div class="prod-modal__img">
+												<img src="./img/prod_modal_3.png" alt="">
 											</div>
+											<div class="prod-modal__volume">Объем: 280 мл</div>
+											<div class="prod-modal__colors">
+												<div class="prod-modal__color prod-modal__color--white">Белый</div>
+												<div class="prod-modal__color">Бесцветный</div>
+											</div>
+											<a href="javascript:void(0);" class="tnm-btn prod-modal__btn">Купить в
+												интернет-магазине</a>
 										</div>
-										<div class="prod-modal__desc tnm-text">Герметик объединяет все ключевые
-											преимущества ассортимента линейки герметиков: сертифицирован на устойчивость
-											к грибкам, сохраняет первоначальный цвет под воздействием внешних факторов и
-											подходит для применения в любых условиях, что делает его 100% универсальным
-										</div>
+										<div class="prod-modal__right">
+											<div class="prod-modal__header">
+												<div class="prod-modal__title">Универсальный силикон</div>
+												<div class="prod-modal__subtitle">для многофункционального использования
+												</div>
+											</div>
+											<div class="prod-modal__desc tnm-text">Герметик объединяет все ключевые
+												преимущества ассортимента линейки герметиков: сертифицирован на
+												устойчивость
+												к грибкам, сохраняет первоначальный цвет под воздействием внешних
+												факторов и
+												подходит для применения в любых условиях, что делает его 100%
+												универсальным
+											</div>
 
-										<div class="tnm-purpose">
+											<div class="tnm-purpose">
 
-											<div class="tnm-purpose__icon">
-												<svg width="12" height="20" viewBox="0 0 12 20" fill="none"
-													xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M7.64886 10L0.503817 3.00448C0.167939 2.67564 0 2.2571 0 1.74888C0 1.24066 0.167939 0.822123 0.503817 0.493274C0.839695 0.164425 1.26718 0 1.78626 0C2.30534 0 2.73282 0.164425 3.0687 0.493274L11.4962 8.74439C11.6794 8.92377 11.8092 9.11809 11.8855 9.32735C11.9618 9.53662 12 9.76084 12 10C12 10.2392 11.9618 10.4634 11.8855 10.6726C11.8092 10.8819 11.6794 11.0762 11.4962 11.2556L3.0687 19.5067C2.73282 19.8356 2.30534 20 1.78626 20C1.26718 20 0.839695 19.8356 0.503817 19.5067C0.167939 19.1779 0 18.7593 0 18.2511C0 17.7429 0.167939 17.3244 0.503817 16.9955L7.64886 10Z"
-														fill="#E30613" />
-												</svg>
+												<div class="tnm-purpose__icon">
+													<svg width="12" height="20" viewBox="0 0 12 20" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M7.64886 10L0.503817 3.00448C0.167939 2.67564 0 2.2571 0 1.74888C0 1.24066 0.167939 0.822123 0.503817 0.493274C0.839695 0.164425 1.26718 0 1.78626 0C2.30534 0 2.73282 0.164425 3.0687 0.493274L11.4962 8.74439C11.6794 8.92377 11.8092 9.11809 11.8855 9.32735C11.9618 9.53662 12 9.76084 12 10C12 10.2392 11.9618 10.4634 11.8855 10.6726C11.8092 10.8819 11.6794 11.0762 11.4962 11.2556L3.0687 19.5067C2.73282 19.8356 2.30534 20 1.78626 20C1.26718 20 0.839695 19.8356 0.503817 19.5067C0.167939 19.1779 0 18.7593 0 18.2511C0 17.7429 0.167939 17.3244 0.503817 16.9955L7.64886 10Z"
+															fill="#E30613" />
+													</svg>
+												</div>
+												<div class="tnm-purpose__title">Для работ с большинством поверхностей
+												</div>
+												<div class="tnm-purpose__desc tnm-text">
+													<ul>
+														<li>Пластик, стекло, эмалированные поверхности, лакированная
+															древесина, керамика, коррозионно-стойкие металлы</li>
+													</ul>
+												</div>
 											</div>
-											<div class="tnm-purpose__title">Для работ с большинством поверхностей</div>
-											<div class="tnm-purpose__desc tnm-text">
-												<ul>
-													<li>Пластик, стекло, эмалированные поверхности, лакированная
-														древесина, керамика, коррозионно-стойкие металлы</li>
-												</ul>
-											</div>
-										</div>
 
-										<div class="tnm-purpose">
-											<div class="tnm-purpose__icon">
-												<svg width="12" height="20" viewBox="0 0 12 20" fill="none"
-													xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M7.64886 10L0.503817 3.00448C0.167939 2.67564 0 2.2571 0 1.74888C0 1.24066 0.167939 0.822123 0.503817 0.493274C0.839695 0.164425 1.26718 0 1.78626 0C2.30534 0 2.73282 0.164425 3.0687 0.493274L11.4962 8.74439C11.6794 8.92377 11.8092 9.11809 11.8855 9.32735C11.9618 9.53662 12 9.76084 12 10C12 10.2392 11.9618 10.4634 11.8855 10.6726C11.8092 10.8819 11.6794 11.0762 11.4962 11.2556L3.0687 19.5067C2.73282 19.8356 2.30534 20 1.78626 20C1.26718 20 0.839695 19.8356 0.503817 19.5067C0.167939 19.1779 0 18.7593 0 18.2511C0 17.7429 0.167939 17.3244 0.503817 16.9955L7.64886 10Z"
-														fill="#E30613" />
-												</svg>
-											</div>
-											<div class="tnm-purpose__title">Для герметизации</div>
-											<div class="tnm-purpose__desc tnm-text">
-												<ul>
-													<li>Строительных швов на поверхностях из керамики/кирпича</li>
-													<li>Оконных блоков, подоконников и плинтусов</li>
-													<li>Пластиковых вентиляционных труб</li>
-													<li>Швов в светопрозрачных конструкциях</li>
-												</ul>
-											</div>
-										</div>
-										<div class="tnm-advantages">
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_1.svg" alt="">
+											<div class="tnm-purpose">
+												<div class="tnm-purpose__icon">
+													<svg width="12" height="20" viewBox="0 0 12 20" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M7.64886 10L0.503817 3.00448C0.167939 2.67564 0 2.2571 0 1.74888C0 1.24066 0.167939 0.822123 0.503817 0.493274C0.839695 0.164425 1.26718 0 1.78626 0C2.30534 0 2.73282 0.164425 3.0687 0.493274L11.4962 8.74439C11.6794 8.92377 11.8092 9.11809 11.8855 9.32735C11.9618 9.53662 12 9.76084 12 10C12 10.2392 11.9618 10.4634 11.8855 10.6726C11.8092 10.8819 11.6794 11.0762 11.4962 11.2556L3.0687 19.5067C2.73282 19.8356 2.30534 20 1.78626 20C1.26718 20 0.839695 19.8356 0.503817 19.5067C0.167939 19.1779 0 18.7593 0 18.2511C0 17.7429 0.167939 17.3244 0.503817 16.9955L7.64886 10Z"
+															fill="#E30613" />
+													</svg>
 												</div>
-												<div class="tnm-advantages__text">Простота применения</div>
-											</div>
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_2.svg" alt="">
-												</div>
-												<div class="tnm-advantages__text">Устойчив к&nbsp;влаге</div>
-											</div>
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_3.svg" alt="">
-												</div>
-												<div class="tnm-advantages__text">Термостойкий</div>
-											</div>
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_4.svg" alt="">
-												</div>
-												<div class="tnm-advantages__text">Отличная адгезия</div>
-											</div>
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_5.svg" alt="">
-												</div>
-												<div class="tnm-advantages__text">Стойкий к&nbsp;воздействию
-													ультрафиолета
+												<div class="tnm-purpose__title">Для герметизации</div>
+												<div class="tnm-purpose__desc tnm-text">
+													<ul>
+														<li>Строительных швов на поверхностях из керамики/кирпича</li>
+														<li>Оконных блоков, подоконников и плинтусов</li>
+														<li>Пластиковых вентиляционных труб</li>
+														<li>Швов в светопрозрачных конструкциях</li>
+													</ul>
 												</div>
 											</div>
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_6.svg" alt="">
+											<div class="tnm-advantages">
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_1.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Простота применения</div>
 												</div>
-												<div class="tnm-advantages__text">Универсальный</div>
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_2.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Устойчив к&nbsp;влаге</div>
+												</div>
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_3.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Термостойкий</div>
+												</div>
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_4.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Отличная адгезия</div>
+												</div>
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_5.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Стойкий к&nbsp;воздействию
+														ультрафиолета
+													</div>
+												</div>
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_6.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Универсальный</div>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -1057,106 +1097,112 @@
 									</svg>
 								</div>
 								<div class="prod-modal prod-modal--green">
-									<div class="prod-modal__left">
-										<div class="prod-modal__img">
-											<img src="./img/prod_modal_4.png" alt="">
-										</div>
-										<div class="prod-modal__volume">Объем: 280 мл</div>
-										<div class="prod-modal__colors">
-											<div class="prod-modal__color prod-modal__color--white">Белый</div>
-											<div class="prod-modal__color">Бесцветный</div>
-										</div>
-										<a href="javascript:void(0);" class="tnm-btn prod-modal__btn">Купить в
-											интернет-магазине</a>
-									</div>
-									<div class="prod-modal__right">
-										<div class="prod-modal__header">
-											<div class="prod-modal__title">Универсальный силикон</div>
-											<div class="prod-modal__subtitle">для многофункционального использования
+									<div class="prod-modal__inner">
+										<div class="prod-modal__left">
+											<div class="prod-modal__img">
+												<img src="./img/prod_modal_4.png" alt="">
 											</div>
+											<div class="prod-modal__volume">Объем: 280 мл</div>
+											<div class="prod-modal__colors">
+												<div class="prod-modal__color prod-modal__color--white">Белый</div>
+												<div class="prod-modal__color">Бесцветный</div>
+											</div>
+											<a href="javascript:void(0);" class="tnm-btn prod-modal__btn">Купить в
+												интернет-магазине</a>
 										</div>
-										<div class="prod-modal__desc tnm-text">Герметик объединяет все ключевые
-											преимущества ассортимента линейки герметиков: сертифицирован на устойчивость
-											к грибкам, сохраняет первоначальный цвет под воздействием внешних факторов и
-											подходит для применения в любых условиях, что делает его 100% универсальным
-										</div>
+										<div class="prod-modal__right">
+											<div class="prod-modal__header">
+												<div class="prod-modal__title">Универсальный силикон</div>
+												<div class="prod-modal__subtitle">для многофункционального использования
+												</div>
+											</div>
+											<div class="prod-modal__desc tnm-text">Герметик объединяет все ключевые
+												преимущества ассортимента линейки герметиков: сертифицирован на
+												устойчивость
+												к грибкам, сохраняет первоначальный цвет под воздействием внешних
+												факторов и
+												подходит для применения в любых условиях, что делает его 100%
+												универсальным
+											</div>
 
-										<div class="tnm-purpose">
+											<div class="tnm-purpose">
 
-											<div class="tnm-purpose__icon">
-												<svg width="12" height="20" viewBox="0 0 12 20" fill="none"
-													xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M7.64886 10L0.503817 3.00448C0.167939 2.67564 0 2.2571 0 1.74888C0 1.24066 0.167939 0.822123 0.503817 0.493274C0.839695 0.164425 1.26718 0 1.78626 0C2.30534 0 2.73282 0.164425 3.0687 0.493274L11.4962 8.74439C11.6794 8.92377 11.8092 9.11809 11.8855 9.32735C11.9618 9.53662 12 9.76084 12 10C12 10.2392 11.9618 10.4634 11.8855 10.6726C11.8092 10.8819 11.6794 11.0762 11.4962 11.2556L3.0687 19.5067C2.73282 19.8356 2.30534 20 1.78626 20C1.26718 20 0.839695 19.8356 0.503817 19.5067C0.167939 19.1779 0 18.7593 0 18.2511C0 17.7429 0.167939 17.3244 0.503817 16.9955L7.64886 10Z"
-														fill="#E30613" />
-												</svg>
+												<div class="tnm-purpose__icon">
+													<svg width="12" height="20" viewBox="0 0 12 20" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M7.64886 10L0.503817 3.00448C0.167939 2.67564 0 2.2571 0 1.74888C0 1.24066 0.167939 0.822123 0.503817 0.493274C0.839695 0.164425 1.26718 0 1.78626 0C2.30534 0 2.73282 0.164425 3.0687 0.493274L11.4962 8.74439C11.6794 8.92377 11.8092 9.11809 11.8855 9.32735C11.9618 9.53662 12 9.76084 12 10C12 10.2392 11.9618 10.4634 11.8855 10.6726C11.8092 10.8819 11.6794 11.0762 11.4962 11.2556L3.0687 19.5067C2.73282 19.8356 2.30534 20 1.78626 20C1.26718 20 0.839695 19.8356 0.503817 19.5067C0.167939 19.1779 0 18.7593 0 18.2511C0 17.7429 0.167939 17.3244 0.503817 16.9955L7.64886 10Z"
+															fill="#E30613" />
+													</svg>
+												</div>
+												<div class="tnm-purpose__title">Для работ с большинством поверхностей
+												</div>
+												<div class="tnm-purpose__desc tnm-text">
+													<ul>
+														<li>Пластик, стекло, эмалированные поверхности, лакированная
+															древесина, керамика, коррозионно-стойкие металлы</li>
+													</ul>
+												</div>
 											</div>
-											<div class="tnm-purpose__title">Для работ с большинством поверхностей</div>
-											<div class="tnm-purpose__desc tnm-text">
-												<ul>
-													<li>Пластик, стекло, эмалированные поверхности, лакированная
-														древесина, керамика, коррозионно-стойкие металлы</li>
-												</ul>
-											</div>
-										</div>
 
-										<div class="tnm-purpose">
-											<div class="tnm-purpose__icon">
-												<svg width="12" height="20" viewBox="0 0 12 20" fill="none"
-													xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M7.64886 10L0.503817 3.00448C0.167939 2.67564 0 2.2571 0 1.74888C0 1.24066 0.167939 0.822123 0.503817 0.493274C0.839695 0.164425 1.26718 0 1.78626 0C2.30534 0 2.73282 0.164425 3.0687 0.493274L11.4962 8.74439C11.6794 8.92377 11.8092 9.11809 11.8855 9.32735C11.9618 9.53662 12 9.76084 12 10C12 10.2392 11.9618 10.4634 11.8855 10.6726C11.8092 10.8819 11.6794 11.0762 11.4962 11.2556L3.0687 19.5067C2.73282 19.8356 2.30534 20 1.78626 20C1.26718 20 0.839695 19.8356 0.503817 19.5067C0.167939 19.1779 0 18.7593 0 18.2511C0 17.7429 0.167939 17.3244 0.503817 16.9955L7.64886 10Z"
-														fill="#E30613" />
-												</svg>
-											</div>
-											<div class="tnm-purpose__title">Для герметизации</div>
-											<div class="tnm-purpose__desc tnm-text">
-												<ul>
-													<li>Строительных швов на поверхностях из керамики/кирпича</li>
-													<li>Оконных блоков, подоконников и плинтусов</li>
-													<li>Пластиковых вентиляционных труб</li>
-													<li>Швов в светопрозрачных конструкциях</li>
-												</ul>
-											</div>
-										</div>
-										<div class="tnm-advantages">
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_1.svg" alt="">
+											<div class="tnm-purpose">
+												<div class="tnm-purpose__icon">
+													<svg width="12" height="20" viewBox="0 0 12 20" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M7.64886 10L0.503817 3.00448C0.167939 2.67564 0 2.2571 0 1.74888C0 1.24066 0.167939 0.822123 0.503817 0.493274C0.839695 0.164425 1.26718 0 1.78626 0C2.30534 0 2.73282 0.164425 3.0687 0.493274L11.4962 8.74439C11.6794 8.92377 11.8092 9.11809 11.8855 9.32735C11.9618 9.53662 12 9.76084 12 10C12 10.2392 11.9618 10.4634 11.8855 10.6726C11.8092 10.8819 11.6794 11.0762 11.4962 11.2556L3.0687 19.5067C2.73282 19.8356 2.30534 20 1.78626 20C1.26718 20 0.839695 19.8356 0.503817 19.5067C0.167939 19.1779 0 18.7593 0 18.2511C0 17.7429 0.167939 17.3244 0.503817 16.9955L7.64886 10Z"
+															fill="#E30613" />
+													</svg>
 												</div>
-												<div class="tnm-advantages__text">Простота применения</div>
-											</div>
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_2.svg" alt="">
-												</div>
-												<div class="tnm-advantages__text">Устойчив к&nbsp;влаге</div>
-											</div>
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_3.svg" alt="">
-												</div>
-												<div class="tnm-advantages__text">Термостойкий</div>
-											</div>
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_4.svg" alt="">
-												</div>
-												<div class="tnm-advantages__text">Отличная адгезия</div>
-											</div>
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_5.svg" alt="">
-												</div>
-												<div class="tnm-advantages__text">Стойкий к&nbsp;воздействию
-													ультрафиолета
+												<div class="tnm-purpose__title">Для герметизации</div>
+												<div class="tnm-purpose__desc tnm-text">
+													<ul>
+														<li>Строительных швов на поверхностях из керамики/кирпича</li>
+														<li>Оконных блоков, подоконников и плинтусов</li>
+														<li>Пластиковых вентиляционных труб</li>
+														<li>Швов в светопрозрачных конструкциях</li>
+													</ul>
 												</div>
 											</div>
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_6.svg" alt="">
+											<div class="tnm-advantages">
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_1.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Простота применения</div>
 												</div>
-												<div class="tnm-advantages__text">Универсальный</div>
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_2.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Устойчив к&nbsp;влаге</div>
+												</div>
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_3.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Термостойкий</div>
+												</div>
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_4.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Отличная адгезия</div>
+												</div>
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_5.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Стойкий к&nbsp;воздействию
+														ультрафиолета
+													</div>
+												</div>
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_6.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Универсальный</div>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -1178,106 +1224,112 @@
 									</svg>
 								</div>
 								<div class="prod-modal prod-modal--grey">
-									<div class="prod-modal__left">
-										<div class="prod-modal__img">
-											<img src="./img/prod_modal_5.png" alt="">
-										</div>
-										<div class="prod-modal__volume">Объем: 280 мл</div>
-										<div class="prod-modal__colors">
-											<div class="prod-modal__color prod-modal__color--white">Белый</div>
-											<div class="prod-modal__color">Бесцветный</div>
-										</div>
-										<a href="javascript:void(0);" class="tnm-btn prod-modal__btn">Купить в
-											интернет-магазине</a>
-									</div>
-									<div class="prod-modal__right">
-										<div class="prod-modal__header">
-											<div class="prod-modal__title">Универсальный силикон</div>
-											<div class="prod-modal__subtitle">для многофункционального использования
+									<div class="prod-modal__inner">
+										<div class="prod-modal__left">
+											<div class="prod-modal__img">
+												<img src="./img/prod_modal_5.png" alt="">
 											</div>
+											<div class="prod-modal__volume">Объем: 280 мл</div>
+											<div class="prod-modal__colors">
+												<div class="prod-modal__color prod-modal__color--white">Белый</div>
+												<div class="prod-modal__color">Бесцветный</div>
+											</div>
+											<a href="javascript:void(0);" class="tnm-btn prod-modal__btn">Купить в
+												интернет-магазине</a>
 										</div>
-										<div class="prod-modal__desc tnm-text">Герметик объединяет все ключевые
-											преимущества ассортимента линейки герметиков: сертифицирован на устойчивость
-											к грибкам, сохраняет первоначальный цвет под воздействием внешних факторов и
-											подходит для применения в любых условиях, что делает его 100% универсальным
-										</div>
+										<div class="prod-modal__right">
+											<div class="prod-modal__header">
+												<div class="prod-modal__title">Универсальный силикон</div>
+												<div class="prod-modal__subtitle">для многофункционального использования
+												</div>
+											</div>
+											<div class="prod-modal__desc tnm-text">Герметик объединяет все ключевые
+												преимущества ассортимента линейки герметиков: сертифицирован на
+												устойчивость
+												к грибкам, сохраняет первоначальный цвет под воздействием внешних
+												факторов и
+												подходит для применения в любых условиях, что делает его 100%
+												универсальным
+											</div>
 
-										<div class="tnm-purpose">
+											<div class="tnm-purpose">
 
-											<div class="tnm-purpose__icon">
-												<svg width="12" height="20" viewBox="0 0 12 20" fill="none"
-													xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M7.64886 10L0.503817 3.00448C0.167939 2.67564 0 2.2571 0 1.74888C0 1.24066 0.167939 0.822123 0.503817 0.493274C0.839695 0.164425 1.26718 0 1.78626 0C2.30534 0 2.73282 0.164425 3.0687 0.493274L11.4962 8.74439C11.6794 8.92377 11.8092 9.11809 11.8855 9.32735C11.9618 9.53662 12 9.76084 12 10C12 10.2392 11.9618 10.4634 11.8855 10.6726C11.8092 10.8819 11.6794 11.0762 11.4962 11.2556L3.0687 19.5067C2.73282 19.8356 2.30534 20 1.78626 20C1.26718 20 0.839695 19.8356 0.503817 19.5067C0.167939 19.1779 0 18.7593 0 18.2511C0 17.7429 0.167939 17.3244 0.503817 16.9955L7.64886 10Z"
-														fill="#E30613" />
-												</svg>
+												<div class="tnm-purpose__icon">
+													<svg width="12" height="20" viewBox="0 0 12 20" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M7.64886 10L0.503817 3.00448C0.167939 2.67564 0 2.2571 0 1.74888C0 1.24066 0.167939 0.822123 0.503817 0.493274C0.839695 0.164425 1.26718 0 1.78626 0C2.30534 0 2.73282 0.164425 3.0687 0.493274L11.4962 8.74439C11.6794 8.92377 11.8092 9.11809 11.8855 9.32735C11.9618 9.53662 12 9.76084 12 10C12 10.2392 11.9618 10.4634 11.8855 10.6726C11.8092 10.8819 11.6794 11.0762 11.4962 11.2556L3.0687 19.5067C2.73282 19.8356 2.30534 20 1.78626 20C1.26718 20 0.839695 19.8356 0.503817 19.5067C0.167939 19.1779 0 18.7593 0 18.2511C0 17.7429 0.167939 17.3244 0.503817 16.9955L7.64886 10Z"
+															fill="#E30613" />
+													</svg>
+												</div>
+												<div class="tnm-purpose__title">Для работ с большинством поверхностей
+												</div>
+												<div class="tnm-purpose__desc tnm-text">
+													<ul>
+														<li>Пластик, стекло, эмалированные поверхности, лакированная
+															древесина, керамика, коррозионно-стойкие металлы</li>
+													</ul>
+												</div>
 											</div>
-											<div class="tnm-purpose__title">Для работ с большинством поверхностей</div>
-											<div class="tnm-purpose__desc tnm-text">
-												<ul>
-													<li>Пластик, стекло, эмалированные поверхности, лакированная
-														древесина, керамика, коррозионно-стойкие металлы</li>
-												</ul>
-											</div>
-										</div>
 
-										<div class="tnm-purpose">
-											<div class="tnm-purpose__icon">
-												<svg width="12" height="20" viewBox="0 0 12 20" fill="none"
-													xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M7.64886 10L0.503817 3.00448C0.167939 2.67564 0 2.2571 0 1.74888C0 1.24066 0.167939 0.822123 0.503817 0.493274C0.839695 0.164425 1.26718 0 1.78626 0C2.30534 0 2.73282 0.164425 3.0687 0.493274L11.4962 8.74439C11.6794 8.92377 11.8092 9.11809 11.8855 9.32735C11.9618 9.53662 12 9.76084 12 10C12 10.2392 11.9618 10.4634 11.8855 10.6726C11.8092 10.8819 11.6794 11.0762 11.4962 11.2556L3.0687 19.5067C2.73282 19.8356 2.30534 20 1.78626 20C1.26718 20 0.839695 19.8356 0.503817 19.5067C0.167939 19.1779 0 18.7593 0 18.2511C0 17.7429 0.167939 17.3244 0.503817 16.9955L7.64886 10Z"
-														fill="#E30613" />
-												</svg>
-											</div>
-											<div class="tnm-purpose__title">Для герметизации</div>
-											<div class="tnm-purpose__desc tnm-text">
-												<ul>
-													<li>Строительных швов на поверхностях из керамики/кирпича</li>
-													<li>Оконных блоков, подоконников и плинтусов</li>
-													<li>Пластиковых вентиляционных труб</li>
-													<li>Швов в светопрозрачных конструкциях</li>
-												</ul>
-											</div>
-										</div>
-										<div class="tnm-advantages">
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_1.svg" alt="">
+											<div class="tnm-purpose">
+												<div class="tnm-purpose__icon">
+													<svg width="12" height="20" viewBox="0 0 12 20" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M7.64886 10L0.503817 3.00448C0.167939 2.67564 0 2.2571 0 1.74888C0 1.24066 0.167939 0.822123 0.503817 0.493274C0.839695 0.164425 1.26718 0 1.78626 0C2.30534 0 2.73282 0.164425 3.0687 0.493274L11.4962 8.74439C11.6794 8.92377 11.8092 9.11809 11.8855 9.32735C11.9618 9.53662 12 9.76084 12 10C12 10.2392 11.9618 10.4634 11.8855 10.6726C11.8092 10.8819 11.6794 11.0762 11.4962 11.2556L3.0687 19.5067C2.73282 19.8356 2.30534 20 1.78626 20C1.26718 20 0.839695 19.8356 0.503817 19.5067C0.167939 19.1779 0 18.7593 0 18.2511C0 17.7429 0.167939 17.3244 0.503817 16.9955L7.64886 10Z"
+															fill="#E30613" />
+													</svg>
 												</div>
-												<div class="tnm-advantages__text">Простота применения</div>
-											</div>
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_2.svg" alt="">
-												</div>
-												<div class="tnm-advantages__text">Устойчив к&nbsp;влаге</div>
-											</div>
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_3.svg" alt="">
-												</div>
-												<div class="tnm-advantages__text">Термостойкий</div>
-											</div>
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_4.svg" alt="">
-												</div>
-												<div class="tnm-advantages__text">Отличная адгезия</div>
-											</div>
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_5.svg" alt="">
-												</div>
-												<div class="tnm-advantages__text">Стойкий к&nbsp;воздействию
-													ультрафиолета
+												<div class="tnm-purpose__title">Для герметизации</div>
+												<div class="tnm-purpose__desc tnm-text">
+													<ul>
+														<li>Строительных швов на поверхностях из керамики/кирпича</li>
+														<li>Оконных блоков, подоконников и плинтусов</li>
+														<li>Пластиковых вентиляционных труб</li>
+														<li>Швов в светопрозрачных конструкциях</li>
+													</ul>
 												</div>
 											</div>
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_6.svg" alt="">
+											<div class="tnm-advantages">
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_1.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Простота применения</div>
 												</div>
-												<div class="tnm-advantages__text">Универсальный</div>
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_2.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Устойчив к&nbsp;влаге</div>
+												</div>
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_3.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Термостойкий</div>
+												</div>
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_4.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Отличная адгезия</div>
+												</div>
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_5.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Стойкий к&nbsp;воздействию
+														ультрафиолета
+													</div>
+												</div>
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_6.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Универсальный</div>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -1299,106 +1351,112 @@
 									</svg>
 								</div>
 								<div class="prod-modal prod-modal--black">
-									<div class="prod-modal__left">
-										<div class="prod-modal__img">
-											<img src="./img/prod_modal_6.png" alt="">
-										</div>
-										<div class="prod-modal__volume">Объем: 280 мл</div>
-										<div class="prod-modal__colors">
-											<div class="prod-modal__color prod-modal__color--white">Белый</div>
-											<div class="prod-modal__color">Бесцветный</div>
-										</div>
-										<a href="javascript:void(0);" class="tnm-btn prod-modal__btn">Купить в
-											интернет-магазине</a>
-									</div>
-									<div class="prod-modal__right">
-										<div class="prod-modal__header">
-											<div class="prod-modal__title">Универсальный силикон</div>
-											<div class="prod-modal__subtitle">для многофункционального использования
+									<div class="prod-modal__inner">
+										<div class="prod-modal__left">
+											<div class="prod-modal__img">
+												<img src="./img/prod_modal_6.png" alt="">
 											</div>
+											<div class="prod-modal__volume">Объем: 280 мл</div>
+											<div class="prod-modal__colors">
+												<div class="prod-modal__color prod-modal__color--white">Белый</div>
+												<div class="prod-modal__color">Бесцветный</div>
+											</div>
+											<a href="javascript:void(0);" class="tnm-btn prod-modal__btn">Купить в
+												интернет-магазине</a>
 										</div>
-										<div class="prod-modal__desc tnm-text">Герметик объединяет все ключевые
-											преимущества ассортимента линейки герметиков: сертифицирован на устойчивость
-											к грибкам, сохраняет первоначальный цвет под воздействием внешних факторов и
-											подходит для применения в любых условиях, что делает его 100% универсальным
-										</div>
+										<div class="prod-modal__right">
+											<div class="prod-modal__header">
+												<div class="prod-modal__title">Универсальный силикон</div>
+												<div class="prod-modal__subtitle">для многофункционального использования
+												</div>
+											</div>
+											<div class="prod-modal__desc tnm-text">Герметик объединяет все ключевые
+												преимущества ассортимента линейки герметиков: сертифицирован на
+												устойчивость
+												к грибкам, сохраняет первоначальный цвет под воздействием внешних
+												факторов и
+												подходит для применения в любых условиях, что делает его 100%
+												универсальным
+											</div>
 
-										<div class="tnm-purpose">
+											<div class="tnm-purpose">
 
-											<div class="tnm-purpose__icon">
-												<svg width="12" height="20" viewBox="0 0 12 20" fill="none"
-													xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M7.64886 10L0.503817 3.00448C0.167939 2.67564 0 2.2571 0 1.74888C0 1.24066 0.167939 0.822123 0.503817 0.493274C0.839695 0.164425 1.26718 0 1.78626 0C2.30534 0 2.73282 0.164425 3.0687 0.493274L11.4962 8.74439C11.6794 8.92377 11.8092 9.11809 11.8855 9.32735C11.9618 9.53662 12 9.76084 12 10C12 10.2392 11.9618 10.4634 11.8855 10.6726C11.8092 10.8819 11.6794 11.0762 11.4962 11.2556L3.0687 19.5067C2.73282 19.8356 2.30534 20 1.78626 20C1.26718 20 0.839695 19.8356 0.503817 19.5067C0.167939 19.1779 0 18.7593 0 18.2511C0 17.7429 0.167939 17.3244 0.503817 16.9955L7.64886 10Z"
-														fill="#E30613" />
-												</svg>
+												<div class="tnm-purpose__icon">
+													<svg width="12" height="20" viewBox="0 0 12 20" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M7.64886 10L0.503817 3.00448C0.167939 2.67564 0 2.2571 0 1.74888C0 1.24066 0.167939 0.822123 0.503817 0.493274C0.839695 0.164425 1.26718 0 1.78626 0C2.30534 0 2.73282 0.164425 3.0687 0.493274L11.4962 8.74439C11.6794 8.92377 11.8092 9.11809 11.8855 9.32735C11.9618 9.53662 12 9.76084 12 10C12 10.2392 11.9618 10.4634 11.8855 10.6726C11.8092 10.8819 11.6794 11.0762 11.4962 11.2556L3.0687 19.5067C2.73282 19.8356 2.30534 20 1.78626 20C1.26718 20 0.839695 19.8356 0.503817 19.5067C0.167939 19.1779 0 18.7593 0 18.2511C0 17.7429 0.167939 17.3244 0.503817 16.9955L7.64886 10Z"
+															fill="#E30613" />
+													</svg>
+												</div>
+												<div class="tnm-purpose__title">Для работ с большинством поверхностей
+												</div>
+												<div class="tnm-purpose__desc tnm-text">
+													<ul>
+														<li>Пластик, стекло, эмалированные поверхности, лакированная
+															древесина, керамика, коррозионно-стойкие металлы</li>
+													</ul>
+												</div>
 											</div>
-											<div class="tnm-purpose__title">Для работ с большинством поверхностей</div>
-											<div class="tnm-purpose__desc tnm-text">
-												<ul>
-													<li>Пластик, стекло, эмалированные поверхности, лакированная
-														древесина, керамика, коррозионно-стойкие металлы</li>
-												</ul>
-											</div>
-										</div>
 
-										<div class="tnm-purpose">
-											<div class="tnm-purpose__icon">
-												<svg width="12" height="20" viewBox="0 0 12 20" fill="none"
-													xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M7.64886 10L0.503817 3.00448C0.167939 2.67564 0 2.2571 0 1.74888C0 1.24066 0.167939 0.822123 0.503817 0.493274C0.839695 0.164425 1.26718 0 1.78626 0C2.30534 0 2.73282 0.164425 3.0687 0.493274L11.4962 8.74439C11.6794 8.92377 11.8092 9.11809 11.8855 9.32735C11.9618 9.53662 12 9.76084 12 10C12 10.2392 11.9618 10.4634 11.8855 10.6726C11.8092 10.8819 11.6794 11.0762 11.4962 11.2556L3.0687 19.5067C2.73282 19.8356 2.30534 20 1.78626 20C1.26718 20 0.839695 19.8356 0.503817 19.5067C0.167939 19.1779 0 18.7593 0 18.2511C0 17.7429 0.167939 17.3244 0.503817 16.9955L7.64886 10Z"
-														fill="#E30613" />
-												</svg>
-											</div>
-											<div class="tnm-purpose__title">Для герметизации</div>
-											<div class="tnm-purpose__desc tnm-text">
-												<ul>
-													<li>Строительных швов на поверхностях из керамики/кирпича</li>
-													<li>Оконных блоков, подоконников и плинтусов</li>
-													<li>Пластиковых вентиляционных труб</li>
-													<li>Швов в светопрозрачных конструкциях</li>
-												</ul>
-											</div>
-										</div>
-										<div class="tnm-advantages">
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_1.svg" alt="">
+											<div class="tnm-purpose">
+												<div class="tnm-purpose__icon">
+													<svg width="12" height="20" viewBox="0 0 12 20" fill="none"
+														xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M7.64886 10L0.503817 3.00448C0.167939 2.67564 0 2.2571 0 1.74888C0 1.24066 0.167939 0.822123 0.503817 0.493274C0.839695 0.164425 1.26718 0 1.78626 0C2.30534 0 2.73282 0.164425 3.0687 0.493274L11.4962 8.74439C11.6794 8.92377 11.8092 9.11809 11.8855 9.32735C11.9618 9.53662 12 9.76084 12 10C12 10.2392 11.9618 10.4634 11.8855 10.6726C11.8092 10.8819 11.6794 11.0762 11.4962 11.2556L3.0687 19.5067C2.73282 19.8356 2.30534 20 1.78626 20C1.26718 20 0.839695 19.8356 0.503817 19.5067C0.167939 19.1779 0 18.7593 0 18.2511C0 17.7429 0.167939 17.3244 0.503817 16.9955L7.64886 10Z"
+															fill="#E30613" />
+													</svg>
 												</div>
-												<div class="tnm-advantages__text">Простота применения</div>
-											</div>
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_2.svg" alt="">
-												</div>
-												<div class="tnm-advantages__text">Устойчив к&nbsp;влаге</div>
-											</div>
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_3.svg" alt="">
-												</div>
-												<div class="tnm-advantages__text">Термостойкий</div>
-											</div>
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_4.svg" alt="">
-												</div>
-												<div class="tnm-advantages__text">Отличная адгезия</div>
-											</div>
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_5.svg" alt="">
-												</div>
-												<div class="tnm-advantages__text">Стойкий к&nbsp;воздействию
-													ультрафиолета
+												<div class="tnm-purpose__title">Для герметизации</div>
+												<div class="tnm-purpose__desc tnm-text">
+													<ul>
+														<li>Строительных швов на поверхностях из керамики/кирпича</li>
+														<li>Оконных блоков, подоконников и плинтусов</li>
+														<li>Пластиковых вентиляционных труб</li>
+														<li>Швов в светопрозрачных конструкциях</li>
+													</ul>
 												</div>
 											</div>
-											<div class="tnm-advantages__item">
-												<div class="tnm-advantages__icon">
-													<img src="./img/advantage_6.svg" alt="">
+											<div class="tnm-advantages">
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_1.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Простота применения</div>
 												</div>
-												<div class="tnm-advantages__text">Универсальный</div>
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_2.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Устойчив к&nbsp;влаге</div>
+												</div>
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_3.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Термостойкий</div>
+												</div>
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_4.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Отличная адгезия</div>
+												</div>
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_5.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Стойкий к&nbsp;воздействию
+														ультрафиолета
+													</div>
+												</div>
+												<div class="tnm-advantages__item">
+													<div class="tnm-advantages__icon">
+														<img src="./img/advantage_6.svg" alt="">
+													</div>
+													<div class="tnm-advantages__text">Универсальный</div>
+												</div>
 											</div>
 										</div>
 									</div>
