@@ -1298,8 +1298,8 @@ html:has(.sealant-master) {
 			-webkit-box-pack: center;
 			justify-content: center;
 			min-height: 34px;
-			-webkit-box-flex: 0;
-			flex: 0 1 50%;
+			-webkit-box-flex: 1;
+			flex: 1 1 50%;
 			padding: 8px 12px;
 			font-weight: 600;
 			font-size: 15px;
@@ -1311,6 +1311,12 @@ html:has(.sealant-master) {
 			background-color: #fff;
 			border-color: #fff;
 			color: #1B4052;
+		}
+
+		&__color--black {
+			background-color: #000;
+			border-color: #000;
+			color: #fff;
 		}
 
 		&__right {

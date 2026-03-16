@@ -1135,7 +1135,7 @@ html:has(.sealant-master) {
   align-items: center;
   justify-content: center;
   min-height: 34px;
-  flex: 0 1 50%;
+  flex: 1 1 50%;
   padding: 8px 12px;
   font-weight: 600;
   font-size: 15px;
@@ -1146,6 +1146,11 @@ html:has(.sealant-master) {
   background-color: #fff;
   border-color: #fff;
   color: #1B4052;
+}
+.sealant-master .prod-modal__color--black {
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
 }
 .sealant-master .prod-modal__right {
   flex: 1 1 auto;
