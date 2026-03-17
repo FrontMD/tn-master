@@ -1392,30 +1392,6 @@ html:has(.sealant-master) {
 			pointer-events: none;
 		}
 
-		/*&__color--white {
-			background-color: #fff;
-			border-color: #fff;
-			color: #1B4052;
-		}
-
-		&__color--black {
-			background-color: #000;
-			border-color: #000;
-			color: #fff;
-		}
-
-		&__color--brown {
-			background-color: #754B23;
-			border-color: #754B23;
-			color: #fff;
-		}
-
-		&__color--grey {
-			background-color: #848484;
-			border-color: #848484;
-			color: #fff;
-		}*/
-
 		&__right {
 			-webkit-box-flex: 1;
 			flex: 1 1 auto;
@@ -1512,11 +1488,11 @@ html:has(.sealant-master) {
 		}
 
 		&--grey {
-			background-color: rgba(143, 147, 145, 0.4);
+			background-color: rgba(193, 197, 195, 0.4);
 		}
 
 		&--black {
-			background-color: rgba(35, 35, 35, 0.4);
+			background-color: rgba(143, 147, 145, 0.4);
 		}
 	}
 

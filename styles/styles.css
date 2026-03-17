@@ -1210,31 +1210,6 @@ html:has(.sealant-master) {
   color: #1B4052;
   pointer-events: none;
 }
-.sealant-master .prod-modal {
-  /*&__color--white {
-  	background-color: #fff;
-  	border-color: #fff;
-  	color: #1B4052;
-  }
-
-  &__color--black {
-  	background-color: #000;
-  	border-color: #000;
-  	color: #fff;
-  }
-
-  &__color--brown {
-  	background-color: #754B23;
-  	border-color: #754B23;
-  	color: #fff;
-  }
-
-  &__color--grey {
-  	background-color: #848484;
-  	border-color: #848484;
-  	color: #fff;
-  }*/
-}
 .sealant-master .prod-modal__right {
   flex: 1 1 auto;
   max-width: calc(100% - 309px - 40px);
@@ -1325,10 +1300,10 @@ html:has(.sealant-master) {
   background-color: rgba(125, 175, 108, 0.4);
 }
 .sealant-master .prod-modal--grey {
-  background-color: rgba(143, 147, 145, 0.4);
+  background-color: rgba(193, 197, 195, 0.4);
 }
 .sealant-master .prod-modal--black {
-  background-color: rgba(35, 35, 35, 0.4);
+  background-color: rgba(143, 147, 145, 0.4);
 }
 .sealant-master .video-block {
   margin-left: calc((1440px - 100%) / -2);
