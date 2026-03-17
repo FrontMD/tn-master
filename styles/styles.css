@@ -1010,12 +1010,20 @@ html:has(.sealant-master) {
     gap: 5px;
   }
 }
+.sealant-master .tnm-advantages__icon {
+  width: 100%;
+  max-width: 115px;
+}
+.sealant-master .tnm-advantages__icon img {
+  width: 100%;
+}
 .sealant-master .tnm-advantages__text {
   font-weight: 600;
   font-size: 12px;
   line-height: 130%;
   text-align: center;
   text-transform: uppercase;
+  max-width: 150px;
 }
 @media only screen and (max-width: 767px) {
   .sealant-master .tnm-advantages__text {
@@ -1144,7 +1152,7 @@ html:has(.sealant-master) {
   width: 100%;
   max-height: 535px;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 @media (max-width: 899px) {
   .sealant-master .prod-modal__img img {
