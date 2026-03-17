@@ -1282,12 +1282,20 @@ html:has(.sealant-master) {
 		}
 
 		&__colors {
+			width: 100%;
+		}
+
+		&__crow {
 			display: -webkit-box;
 			display: flex;
 			-webkit-box-align: stretch;
 			align-items: stretch;
 			gap: 8px;
 			width: 100%;
+		}
+
+		&__crow+.prod-modal__crow {
+			margin-top: 8px;
 		}
 
 		&__color {
@@ -1316,6 +1324,18 @@ html:has(.sealant-master) {
 		&__color--black {
 			background-color: #000;
 			border-color: #000;
+			color: #fff;
+		}
+
+		&__color--brown {
+			background-color: #754B23;
+			border-color: #754B23;
+			color: #fff;
+		}
+
+		&__color--grey {
+			background-color: #848484;
+			border-color: #848484;
 			color: #fff;
 		}
 

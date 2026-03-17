@@ -1125,10 +1125,16 @@ html:has(.sealant-master) {
   width: 100%;
 }
 .sealant-master .prod-modal__colors {
+  width: 100%;
+}
+.sealant-master .prod-modal__crow {
   display: flex;
   align-items: stretch;
   gap: 8px;
   width: 100%;
+}
+.sealant-master .prod-modal__crow + .prod-modal__crow {
+  margin-top: 8px;
 }
 .sealant-master .prod-modal__color {
   display: flex;
@@ -1150,6 +1156,16 @@ html:has(.sealant-master) {
 .sealant-master .prod-modal__color--black {
   background-color: #000;
   border-color: #000;
+  color: #fff;
+}
+.sealant-master .prod-modal__color--brown {
+  background-color: #754B23;
+  border-color: #754B23;
+  color: #fff;
+}
+.sealant-master .prod-modal__color--grey {
+  background-color: #848484;
+  border-color: #848484;
   color: #fff;
 }
 .sealant-master .prod-modal__right {
