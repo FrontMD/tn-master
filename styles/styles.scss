@@ -150,6 +150,11 @@ html:has(.sealant-master) {
 		-o-transition: all 0.3s linear;
 		transition: all 0.3s linear;
 		min-height: 56px;
+		transition: all 0.3s linear;
+
+		&:hover {
+			opacity: 0.7;
+		}
 
 		@media (max-width: $bp-laptop) {
 			padding: 15px 20px;
@@ -488,6 +493,14 @@ html:has(.sealant-master) {
 			@media only screen and (max-width: $bp-mobile) {
 				color: #fff;
 				padding: 12px 0;
+			}
+		}
+
+		&__item {
+			transition: all 0.3s linear;
+
+			&:hover {
+				opacity: 0.7;
 			}
 		}
 
@@ -1201,6 +1214,7 @@ html:has(.sealant-master) {
 			padding: 40px 80px 40px 40px;
 			display: -webkit-box;
 			display: flex;
+			align-items: flex-start;
 			gap: 40px;
 
 			@media (max-width: $bp-laptop) {
@@ -1226,6 +1240,7 @@ html:has(.sealant-master) {
 		}
 
 		&__left {
+			position: relative;
 			display: -webkit-box;
 			display: flex;
 			-webkit-box-orient: vertical;
@@ -1236,6 +1251,7 @@ html:has(.sealant-master) {
 			gap: 16px;
 			-webkit-box-flex: 0;
 			flex: 0 0 309px;
+			padding-bottom: 72px;
 
 			@media (max-width: $bp-laptop) {
 				-webkit-box-flex: 0;
@@ -1245,6 +1261,23 @@ html:has(.sealant-master) {
 			@media (max-width: $bp-tablet-small) {
 				-webkit-box-flex: 0;
 				flex: 0 0 240px;
+			}
+
+			@media (max-width: $bp-xs) {
+				padding-bottom: 58px;
+			}
+		}
+
+		&__slides {
+			width: 100%;
+		}
+
+		&__slide {
+			display: none;
+			justify-content: center;
+
+			&.active {
+				display: flex;
 			}
 		}
 
@@ -1267,6 +1300,16 @@ html:has(.sealant-master) {
 
 			img {
 				width: 100%;
+				max-height: 535px;
+				object-fit: contain;
+
+				@media (max-width: $bp-tablet-small) {
+					max-height: 411px;
+				}
+
+				@media (max-width: $bp-xxs) {
+					max-height: 294px;
+				}
 			}
 		}
 
@@ -1278,7 +1321,9 @@ html:has(.sealant-master) {
 		}
 
 		&__btn {
+			position: absolute;
 			width: 100%;
+			bottom: 0;
 		}
 
 		&__colors {
@@ -1313,9 +1358,22 @@ html:has(.sealant-master) {
 			font-size: 15px;
 			line-height: 100%;
 			border: 1px solid $c-text;
+			cursor: pointer;
+			transition: all 0.3s linear;
+
+			&:hover {
+				opacity: 0.7;
+			}
 		}
 
-		&__color--white {
+		&__color.active {
+			background-color: #fff;
+			border-color: #fff;
+			color: #1B4052;
+			pointer-events: none;
+		}
+
+		/*&__color--white {
 			background-color: #fff;
 			border-color: #fff;
 			color: #1B4052;
@@ -1337,7 +1395,7 @@ html:has(.sealant-master) {
 			background-color: #848484;
 			border-color: #848484;
 			color: #fff;
-		}
+		}*/
 
 		&__right {
 			-webkit-box-flex: 1;

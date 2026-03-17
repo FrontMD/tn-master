@@ -114,6 +114,9 @@ $(document).ready(function(){
 
 	/* Modals */
 	modalsInit()
+
+	/* Tabs */
+	tabsInit()
 })
 
 let modals = false
@@ -128,6 +131,44 @@ function modalsInit() {
             unlockBody()
         }
     });
+}
+
+function tabsInit() {
+	const modals = document.querySelectorAll('[data-js="prodModal"]')
+
+	if(!modals.length) return
+
+	modals.forEach(modal => {
+		const tabs = modal.querySelectorAll('[data-js="prodModalTab"]')
+		const slides = modal.querySelectorAll('[data-js="prodModalSlide"]')
+	
+		if(tabs.length && slides.length) {
+			tabs.forEach(tab => {
+				tab.addEventListener('click', () => {
+					const tabId = tab.dataset.id
+
+					if(tabId) {
+						let slide = slides[parseInt(tabId)]
+
+						if(slide) {
+							slides.forEach(item => {
+								item.classList.remove('active')
+							})
+							tabs.forEach(item => {
+								item.classList.remove('active')
+							})
+
+							tab.classList.add('active')
+							slide.classList.add('active')
+						}
+					}
+				})
+			})
+		}
+	})
+
+
+	
 }
 
 function lockBody() {
